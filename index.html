@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<head>
+    <title>SmashTrack TE</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <button id="result" type="button" class="btn btn-primary" onClick="flipCoin()">Choose first ban</Button>
+            </div>
+        </div>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            Game 1:
+            <button type="button" class="btn btn-secondary" id="Battlefield1" onClick='toggleStage("Battlefield1")'>Battlefield</button>
+            <button type="button" class="btn btn-secondary" id="FinalDestination1" onClick='toggleStage("FinalDestination1")'>Final Destination</Button>
+            <button type="button" class="btn btn-secondary" id="DreamLand1" onClick='toggleStage("DreamLand1")'>Dream Land</Button>
+            <button type="button" class="btn btn-secondary" id="FountianOfDreams1" onClick='toggleStage("FountianOfDreams1")'>Fountain of Dreams</Button>
+            <button type="button" class="btn btn-secondary" id="YoshisStory1" onClick='toggleStage("YoshisStory1")'>Yoshi's Story</Button>
+            <br>
+            <br>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="player1game1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Player 1
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Mario")' href="#">Mario</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Dr. Mario")' href="#">Dr. Mario</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Luigi")' href="#">Luigi</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Bowser")' href="#">Bowser</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Peach")' href="#">Peach</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Yoshi")' href="#">Yoshi</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Donkey Kong")' href="#">Donkey Kong</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Captain Falcon")' href="#">Captain Falcon</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Ganondorf")' href="#">Ganondorf</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Falco")' href="#">Falco</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Fox")' href="#">Fox</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Ness")' href="#">Ness</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Ice Climbers")' href="#">Ice Climbers</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Kirby")' href="#">Kirby</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Samus")' href="#">Samus</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Zelda")' href="#">Zelda</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Link")' href="#">Link</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Young Link")' href="#">Young Link</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Sheik")' href="#">Sheik</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Pichu")' href="#">Pichu</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Pikachu")' href="#">Pikachu</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Mewtwo")' href="#">Mewtwo</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Mr. Game and Watch")' href="#">Mr. Game and Watch</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Marth")' href="#">Marth</a>
+                  <a class="dropdown-item" onClick='setPlayer("player1game1","Roy")' href="#">Roy</a>
+                </div>
+            </div>
+            </br>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="player2game1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Player 2
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Mario")' href="#">Mario</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Dr. Mario")' href="#">Dr. Mario</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Luigi")' href="#">Luigi</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Bowser")' href="#">Bowser</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Peach")' href="#">Peach</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Yoshi")' href="#">Yoshi</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Donkey Kong")' href="#">Donkey Kong</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Captain Falcon")' href="#">Captain Falcon</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Ganondorf")' href="#">Ganondorf</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Falco")' href="#">Falco</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Fox")' href="#">Fox</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Ness")' href="#">Ness</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Ice Climbers")' href="#">Ice Climbers</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Kirby")' href="#">Kirby</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Samus")' href="#">Samus</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Zelda")' href="#">Zelda</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Link")' href="#">Link</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Young Link")' href="#">Young Link</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Sheik")' href="#">Sheik</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Pichu")' href="#">Pichu</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Pikachu")' href="#">Pikachu</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Mewtwo")' href="#">Mewtwo</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Mr. Game and Watch")' href="#">Mr. Game and Watch</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Marth")' href="#">Marth</a>
+                  <a class="dropdown-item" onClick='setPlayer("player2game1","Roy")' href="#">Roy</a>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            Game 2:
+            <button type="button" class="btn btn-secondary" id="Battlefield2" onClick='toggleStage("Battlefield2")'>Battlefield</Button>
+            <button type="button" class="btn btn-secondary" id="FinalDestination2" onClick='toggleStage("FinalDestination2")'>Final Destination</Button>
+            <button type="button" class="btn btn-secondary" id="DreamLand2" onClick='toggleStage("DreamLand2")'>Dream Land</Button>
+            <button type="button" class="btn btn-secondary" id="FountainOfDreams2" onClick='toggleStage("FountainOfDreams2")'>Fountain of Dreams</Button>
+            <button type="button" class="btn btn-secondary" id="YoshisStory2" onClick='toggleStage("YoshisStory2")'>Yoshi's Story</Button>
+            <button type="button" class="btn btn-secondary" id="PokemonStadium2" onClick='toggleStage("PokemonStadium2")'>Pokemon Stadium</Button>
+                <br>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="player1game2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Player 1
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Mario")' href="#">Mario</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Dr. Mario")' href="#">Dr. Mario</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Luigi")' href="#">Luigi</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Bowser")' href="#">Bowser</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Peach")' href="#">Peach</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Yoshi")' href="#">Yoshi</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Donkey Kong")' href="#">Donkey Kong</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Captain Falcon")' href="#">Captain Falcon</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Ganondorf")' href="#">Ganondorf</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Falco")' href="#">Falco</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Fox")' href="#">Fox</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Ness")' href="#">Ness</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Ice Climbers")' href="#">Ice Climbers</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Kirby")' href="#">Kirby</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Samus")' href="#">Samus</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Zelda")' href="#">Zelda</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Link")' href="#">Link</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Young Link")' href="#">Young Link</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Sheik")' href="#">Sheik</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Pichu")' href="#">Pichu</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Pikachu")' href="#">Pikachu</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Mewtwo")' href="#">Mewtwo</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Mr. Game and Watch")' href="#">Mr. Game and Watch</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Marth")' href="#">Marth</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game2","Roy")' href="#">Roy</a>
+                    </div>
+                </div>
+                </br>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="player2game2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Player 2
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Mario")' href="#">Mario</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Dr. Mario")' href="#">Dr. Mario</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Luigi")' href="#">Luigi</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Bowser")' href="#">Bowser</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Peach")' href="#">Peach</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Yoshi")' href="#">Yoshi</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Donkey Kong")' href="#">Donkey Kong</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Captain Falcon")' href="#">Captain Falcon</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Ganondorf")' href="#">Ganondorf</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Falco")' href="#">Falco</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Fox")' href="#">Fox</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Ness")' href="#">Ness</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Ice Climbers")' href="#">Ice Climbers</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Kirby")' href="#">Kirby</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Samus")' href="#">Samus</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Zelda")' href="#">Zelda</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Link")' href="#">Link</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Young Link")' href="#">Young Link</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Sheik")' href="#">Sheik</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Pichu")' href="#">Pichu</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Pikachu")' href="#">Pikachu</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Mewtwo")' href="#">Mewtwo</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Mr. Game and Watch")' href="#">Mr. Game and Watch</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Marth")' href="#">Marth</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game2","Roy")' href="#">Roy</a>
+                    </div>
+                </div>
+        </li>
+        <li class="list-group-item">
+            Game 3:
+            <button type="button" class="btn btn-secondary" id="Battlefield3" onClick='toggleStage("Battlefield3")'>Battlefield</Button>
+            <button type="button" class="btn btn-secondary" id="FinalDestination3" onClick='toggleStage("FinalDestination3")'>Final Destination</Button>
+            <button type="button" class="btn btn-secondary" id="DreamLand3" onClick='toggleStage("DreamLand3")'>Dream Land</Button>
+            <button type="button" class="btn btn-secondary" id="FountainOfDreams3" onClick='toggleStage("FountainOfDreams3")'>Fountain of Dreams</Button>
+            <button type="button" class="btn btn-secondary" id="YoshisStory3" onClick='toggleStage("YoshisStory3")'>Yoshi's Story</Button>
+            <button type="button" class="btn btn-secondary" id="PokemonStadium3" onClick='toggleStage("PokemonStadium3")'>Pokemon Stadium</Button>
+                <br>
+                <br>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="player1game3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Player 1
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Mario")' href="#">Mario</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Dr. Mario")' href="#">Dr. Mario</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Luigi")' href="#">Luigi</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Bowser")' href="#">Bowser</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Peach")' href="#">Peach</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Yoshi")' href="#">Yoshi</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Donkey Kong")' href="#">Donkey Kong</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Captain Falcon")' href="#">Captain Falcon</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Ganondorf")' href="#">Ganondorf</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Falco")' href="#">Falco</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Fox")' href="#">Fox</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Ness")' href="#">Ness</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Ice Climbers")' href="#">Ice Climbers</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Kirby")' href="#">Kirby</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Samus")' href="#">Samus</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Zelda")' href="#">Zelda</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Link")' href="#">Link</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Young Link")' href="#">Young Link</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Sheik")' href="#">Sheik</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Pichu")' href="#">Pichu</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Pikachu")' href="#">Pikachu</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Mewtwo")' href="#">Mewtwo</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Mr. Game and Watch")' href="#">Mr. Game and Watch</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Marth")' href="#">Marth</a>
+                      <a class="dropdown-item" onClick='setPlayer("player1game3","Roy")' href="#">Roy</a>
+                    </div>
+                </div>
+                </br>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="player2game3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Player 2
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Mario")' href="#">Mario</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Dr. Mario")' href="#">Dr. Mario</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Luigi")' href="#">Luigi</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Bowser")' href="#">Bowser</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Peach")' href="#">Peach</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Yoshi")' href="#">Yoshi</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Donkey Kong")' href="#">Donkey Kong</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Captain Falcon")' href="#">Captain Falcon</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Ganondorf")' href="#">Ganondorf</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Falco")' href="#">Falco</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Fox")' href="#">Fox</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Ness")' href="#">Ness</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Ice Climbers")' href="#">Ice Climbers</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Kirby")' href="#">Kirby</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Samus")' href="#">Samus</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Zelda")' href="#">Zelda</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Link")' href="#">Link</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Young Link")' href="#">Young Link</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Sheik")' href="#">Sheik</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Pichu")' href="#">Pichu</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Pikachu")' href="#">Pikachu</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Mewtwo")' href="#">Mewtwo</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Mr. Game and Watch")' href="#">Mr. Game and Watch</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Marth")' href="#">Marth</a>
+                      <a class="dropdown-item" onClick='setPlayer("player2game3","Roy")' href="#">Roy</a>
+                    </div>
+                </div>
+        </li>
+    </ul>
+    </div>
+    
+</body>
