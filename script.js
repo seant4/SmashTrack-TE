@@ -24,3 +24,7 @@ function toggleStage(id){
 function setPlayer(id, character){
     document.getElementById(id).innerText=character;
 }
+
+function reset(){
+    location.reload();
+}
