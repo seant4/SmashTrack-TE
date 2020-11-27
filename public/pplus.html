@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <title>About</title>
+    <link rel=icon href="/logo512.png">
+    <script src="script.js"></script>
   </head>
   <body>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -37,12 +39,109 @@
             <li class="nav-item">
                 <a class="nav-link" href="smashtrack.html">SmashTrack  </a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span> </a>
+              
+                <a class="nav-link" href="about.html">About </a>
               </li>
           </ul>
         </div>
       </nav>
-      Coming Soon
+      <br>
+      <div class="container-fluid" style="display: block; text-align: center; margin: auto;">
+        <div class="card" style="width: 100%; display: block; text-align: center; margin: auto;">
+            <div class="card-header">
+                <div>
+                  <p><em>Decide who payer 1 and player 2 are before pressing this button</em></p>
+                    <button id="result" type="button" class="btn btn-primary" onClick="flipCoin()">Choose first ban</Button>
+                </div>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <p><em>The player choosen above will select 1 stage to ban (1 press), the next player will select 2, and the choosen will choose where to go from the remaining (2 presses)</em></p>
+                Game 1:
+                <button type="button" class="btn btn-secondary" style="margin: 5px;" id="Battlefield1" onClick='toggleStage("Battlefield1")'>Battlefield</button>
+                <button type="button" class="btn btn-secondary" style="margin: 5px;" id="FinalDestination1" onClick='toggleStage("FinalDestination1")'>Green Hill Zone</Button>
+                <button type="button" class="btn btn-secondary" style="margin: 5px;" id="DreamLand1" onClick='toggleStage("DreamLand1")'>Smashville</Button>
+                <button type="button" class="btn btn-secondary" style="margin: 5px;" id="FountianOfDreams1" onClick='toggleStage("FountianOfDreams1")'>Pokemon Stadium 2</Button>
+                <button type="button" class="btn btn-secondary" style="margin: 5px;" id="YoshisStory1" onClick='toggleStage("YoshisStory1")'>Delphino's Secret</Button>
+                <br>
+                <br>
+
+                
+            </li>
+            <li class="list-group-item">
+              <p><em>The winner from the previous game will select 2 stages to ban (1 press), and the looser will choose (2 presses) from the remaining</em></p>
+                Game 2:
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="Battlefield2" onClick='toggleStage("Battlefield2")'>Battlefield</Button>
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FinalDestination2" onClick='toggleStage("FinalDestination2")'>Green Hill Zone</Button>
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="DreamLand2" onClick='toggleStage("DreamLand2")'>Smashville</Button>
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FountainOfDreams2" onClick='toggleStage("FountainOfDreams2")'>Pokemon Stadium 2</Button>
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="YoshisStory2" onClick='toggleStage("YoshisStory2")'>Delfino's Secret</Button>
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="WarioLand2" onClick='toggleStage("WarioLand2")'>Wario Land</Button>
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FountainOfDreams22" onClick='toggleStage("FountainOfDreams22")'>Fountain of Dreams</Button>
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FinalDestination22" onClick='toggleStage("FinalDestination22")'>Final Destination</Button>
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="MetalCavern2" onClick='toggleStage("MetalCavern2")'>Metal Cavern</Button>
+                <button type="button" class="btn btn-secondary"style="margin: 5px;" id="DreamLand22" onClick='toggleStage("DreamLand22")'>Dreamland</Button>  
+                    <div class="dropdown">
+                        
+                        </div>
+                        <p><em>In a Best of 3, the player who has won 2 games wins the set</em></p>
+                    </div>
+            </li>
+              <li class="list-group-item" style="text-align: center; margin: auto; padding: 10px">
+                  Game 3:
+                  <button type="button" class="btn btn-secondary"style="margin: 5px;" id="Battlefield3" onClick='toggleStage("Battlefield3")'>Battlefield</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FinalDestination3" onClick='toggleStage("FinalDestination3")'>Green Hill Zone</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="DreamLand3" onClick='toggleStage("DreamLand3")'>Smashville</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FountainOfDreams3" onClick='toggleStage("FountainOfDreams3")'>Pokemon Stadium 2</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="YoshisStory3" onClick='toggleStage("YoshisStory3")'>Delfino's Secret</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="WarioLand3" onClick='toggleStage("WarioLand3")'>Wario Land</Button>
+                      <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FountainOfDreams23" onClick='toggleStage("FountainOfDreams23")'>Fountain of Dreams</Button>
+                      <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FinalDestination23" onClick='toggleStage("FinalDestination23")'>Final Destination</Button>
+                      <button type="button" class="btn btn-secondary"style="margin: 5px;" id="MetalCavern3" onClick='toggleStage("MetalCavern3")'>Metal Cavern</Button>
+                      <button type="button" class="btn btn-secondary"style="margin: 5px;" id="DreamLand23" onClick='toggleStage("DreamLand23")'>Dreamland</Button> 
+                      </br>
+                      <div class="dropdown">
+                      </div>
+                      <p><em>In a Best of 3, the player who has won 2 games wins the set</em></p>
+                    
+              </li>
+              <li class="list-group-item" style="text-align: center; margin: auto; padding: 10px">
+                <p><em>The winner from the previous game will select 2 stages to ban (1 press), and the looser will choose (2 presses) from the remaining</em></p>
+                  Game 4:
+                  <button type="button" class="btn btn-secondary"style="margin: 5px;" id="Battlefield4" onClick='toggleStage("Battlefield4")'>Battlefield</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FinalDestination4" onClick='toggleStage("FinalDestination4")'>Green Hill Zone</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="DreamLand4" onClick='toggleStage("DreamLand4")'>Smashville</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FountainOfDreams4" onClick='toggleStage("FountainOfDreams4")'>Pokemon Stadium 2</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="YoshisStory4" onClick='toggleStage("YoshisStory4")'>Delfino's Secret</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="WarioLand4" onClick='toggleStage("WarioLand4")'>Wario Land</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FountainOfDreams24" onClick='toggleStage("FountainOfDreams24")'>Fountain of Dreams</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FinalDestination24" onClick='toggleStage("FinalDestination24")'>Final Destination</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="MetalCavern4" onClick='toggleStage("MetalCavern4")'>Metal Cavern</Button>
+                    <button type="button" class="btn btn-secondary"style="margin: 5px;" id="DreamLand24" onClick='toggleStage("DreamLand24")'>Dreamland</Button>  
+                      <p><em>In a Best of 5, the player who has won 3 games wins the set</em></p>
+                    
+                    <li class="list-group-item" style="margin: auto; text-align: center; padding: 10px">
+                      <p><em>The winner from the previous game will select 2 stages to ban (1 press), and the looser will choose (2 presses) from the remaining</em></p>
+                        Game 5:
+                        <button type="button" class="btn btn-secondary"style="margin: 5px;" id="Battlefield5" onClick='toggleStage("Battlefield5")'>Battlefield</Button>
+                          <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FinalDestination5" onClick='toggleStage("FinalDestination5")'>Green Hill Zone</Button>
+                          <button type="button" class="btn btn-secondary"style="margin: 5px;" id="DreamLand5" onClick='toggleStage("DreamLand5")'>Smashville</Button>
+                          <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FountainOfDreams5" onClick='toggleStage("FountainOfDreams5")'>Pokemon Stadium 2</Button>
+                          <button type="button" class="btn btn-secondary"style="margin: 5px;" id="YoshisStory5" onClick='toggleStage("YoshisStory5")'>Delfino's Secret</Button>
+                          <button type="button" class="btn btn-secondary"style="margin: 5px;" id="WarioLand5" onClick='toggleStage("WarioLand5")'>Wario Land</Button>
+                          <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FountainOfDreams25" onClick='toggleStage("FountainOfDreams25")'>Fountain of Dreams</Button>
+                          <button type="button" class="btn btn-secondary"style="margin: 5px;" id="FinalDestination25" onClick='toggleStage("FinalDestination25")'>Final Destination</Button>
+                          <button type="button" class="btn btn-secondary"style="margin: 5px;" id="MetalCavern5" onClick='toggleStage("MetalCavern5")'>Metal Cavern</Button>
+                          <button type="button" class="btn btn-secondary"style="margin: 5px;" id="DreamLand25" onClick='toggleStage("DreamLand25")'>Dreamland</Button>  
+                          
+                          <p><em>In a Best of 5, the player who has won 3 games wins the set</em></p>
+                        
+                    </li>
+              <li class="list-group-item" style="margin: auto; text-align: center;">
+                <button type="button" onClick="reset()" class="btn btn-danger">Reset</button>
+              </li>
+            </div>
+          </ul>
+          </div>
   </body>
 </html>
